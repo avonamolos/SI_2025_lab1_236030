@@ -1,0 +1,16 @@
+$ git log --oneline --graph --all
+*   2f5a983 (HEAD -> master, origin/master) Merge branch '1-remove-a-task-by-name'
+|\
+| * 7d09ba3 (origin/1-remove-a-task-by-name, 1-remove-a-task-by-name) Implement removal logic
+* |   5a1b6ad Merge pull request #12 from avonamolos/9-mark-all-tasks-in-a-category-as-completed
+|\ \
+| * | 8277138 (origin/9-mark-all-tasks-in-a-category-as-completed, 9-mark-all-tasks-in-a-category-as-completed) Implement bulk completion logic
+| |/
+* |   6ba907c Merge pull request #11 from avonamolos/8-mark-a-task-as-completed-by-name
+|\ \
+| |/
+|/|
+| * a07ba19 (origin/8-mark-a-task-as-completed-by-name, 8-mark-a-task-as-completed-by-name) Implement completion logic
+|/
+* 2a6046c Add starter code
+* e4c0b3b Initial commit
