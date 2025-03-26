@@ -109,6 +109,7 @@ class TaskManager {
 
     // 9. Mark all tasks in a category as completed
     public void markCategoryCompleted(String category) {
+        for (Task task : tasks) if (task.getCategory().equals(category)) task.complete();
         // TODO: Implement bulk completion logic
     }
 }
