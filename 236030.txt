@@ -1,0 +1,201 @@
+$ git init
+Initialized empty Git repository in C:/Users/avona/SI_2025_lab1_236030/.git/
+git
+avona@avonamolos MINGW64 ~/SI_2025_lab1_236030 (master)
+$ git add README.md
+fatal: pathspec 'README.md' did not match any files
+
+avona@avonamolos MINGW64 ~/SI_2025_lab1_236030 (master)
+$ nano README.md
+
+avona@avonamolos MINGW64 ~/SI_2025_lab1_236030 (master)
+$ git add .
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+git
+avona@avonamolos MINGW64 ~/SI_2025_lab1_236030 (master)
+$ git commit -m "Initial commit"
+[master (root-commit) e4c0b3b] Initial commit
+ 1 file changed, 2 insertions(+)
+ create mode 100644 README.md
+
+avona@avonamolos MINGW64 ~/SI_2025_lab1_236030 (master)
+$ git push
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote repository using
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+
+avona@avonamolos MINGW64 ~/SI_2025_lab1_236030 (master)
+$ git remote add origin https://github.com/avonamolos/SI_2025_lab1_236030.git
+
+avona@avonamolos MINGW64 ~/SI_2025_lab1_236030 (master)
+$ git push -u origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 297 bytes | 297.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/avonamolos/SI_2025_lab1_236030.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+
+avona@avonamolos MINGW64 ~/SI_2025_lab1_236030 (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+avona@avonamolos MINGW64 ~/SI_2025_lab1_236030 (master)
+$ git log --oneline --graph --all
+* e4c0b3b (HEAD -> master, origin/master) Initial commit
+
+avona@avonamolos MINGW64 ~/SI_2025_lab1_236030 (master)
+$ git add SI2025Lab1Main.java
+warning: in the working copy of 'SI2025Lab1Main.java', LF will be replaced by CRLF the next time Git touches it
+gi
+avona@avonamolos MINGW64 ~/SI_2025_lab1_236030 (master)
+$ git commit -m "Add starter code"
+[master 2a6046c] Add starter code
+ 1 file changed, 126 insertions(+)
+ create mode 100644 SI2025Lab1Main.java
+
+avona@avonamolos MINGW64 ~/SI_2025_lab1_236030 (master)
+$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.20 KiB | 616.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/avonamolos/SI_2025_lab1_236030.git
+   e4c0b3b..2a6046c  master -> master
+
+avona@avonamolos MINGW64 ~/SI_2025_lab1_236030 (master)
+$ git fetch origin
+From https://github.com/avonamolos/SI_2025_lab1_236030
+ * [new branch]      1-remove-a-task-by-name -> origin/1-remove-a-task-by-name
+ * [new branch]      8-mark-a-task-as-completed-by-name -> origin/8-mark-a-task-as-completed-by-name
+ * [new branch]      9-mark-all-tasks-in-a-category-as-completed -> origin/9-mark-all-tasks-in-a-category-as-completed
+
+avona@avonamolos MINGW64 ~/SI_2025_lab1_236030 (master)
+$ git checkout 1-remove-a-task-by-name
+branch '1-remove-a-task-by-name' set up to track 'origin/1-remove-a-task-by-name'.
+Switched to a new branch '1-remove-a-task-by-name'
+
+avona@avonamolos MINGW64 ~/SI_2025_lab1_236030 (1-remove-a-task-by-name)
+$ git status
+On branch 1-remove-a-task-by-name
+Your branch is up to date with 'origin/1-remove-a-task-by-name'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   SI2025Lab1Main.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+avona@avonamolos MINGW64 ~/SI_2025_lab1_236030 (1-remove-a-task-by-name)
+$ git add SI2025Lab1Main.java
+warning: in the working copy of 'SI2025Lab1Main.java', LF will be replaced by CRLF the next time Git touches it
+gi
+avona@avonamolos MINGW64 ~/SI_2025_lab1_236030 (1-remove-a-task-by-name)
+$ git commit -m "Implement removal logic"
+[1-remove-a-task-by-name 7d09ba3] Implement removal logic
+ 1 file changed, 2 insertions(+)
+
+avona@avonamolos MINGW64 ~/SI_2025_lab1_236030 (1-remove-a-task-by-name)
+$ git push origin 1-remove-a-task-by-name
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 407 bytes | 407.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/avonamolos/SI_2025_lab1_236030.git
+   2a6046c..7d09ba3  1-remove-a-task-by-name -> 1-remove-a-task-by-name
+
+avona@avonamolos MINGW64 ~/SI_2025_lab1_236030 (1-remove-a-task-by-name)
+$ git checkout 8-mark-a-task-as-completed-by-name
+branch '8-mark-a-task-as-completed-by-name' set up to track 'origin/8-mark-a-task-as-completed-by-name'.
+Switched to a new branch '8-mark-a-task-as-completed-by-name'
+
+avona@avonamolos MINGW64 ~/SI_2025_lab1_236030 (8-mark-a-task-as-completed-by-name)
+$ git add SI2025Lab1Main.java
+
+avona@avonamolos MINGW64 ~/SI_2025_lab1_236030 (8-mark-a-task-as-completed-by-name)
+$ git commit -m "Implement completion logic"
+[8-mark-a-task-as-completed-by-name a07ba19] Implement completion logic
+ 1 file changed, 1 insertion(+)
+gi
+avona@avonamolos MINGW64 ~/SI_2025_lab1_236030 (8-mark-a-task-as-completed-by-name)
+$ git push origin 8-mark-a-task-as-completed-by-name
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 388 bytes | 194.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/avonamolos/SI_2025_lab1_236030.git
+   2a6046c..a07ba19  8-mark-a-task-as-completed-by-name -> 8-mark-a-task-as-completed-by-name
+
+avona@avonamolos MINGW64 ~/SI_2025_lab1_236030 (8-mark-a-task-as-completed-by-name)
+$ git checkout 9-mark-all-tasks-in-a-category-as-completed
+branch '9-mark-all-tasks-in-a-category-as-completed' set up to track 'origin/9-mark-all-tasks-in-a-category-as-completed'.
+Switched to a new branch '9-mark-all-tasks-in-a-category-as-completed'
+
+avona@avonamolos MINGW64 ~/SI_2025_lab1_236030 (9-mark-all-tasks-in-a-category-as-completed)
+$ git add SI2025Lab1Main.java
+g
+avona@avonamolos MINGW64 ~/SI_2025_lab1_236030 (9-mark-all-tasks-in-a-category-as-completed)
+$ git commit -m "Implement bulk completion logic"
+[9-mark-all-tasks-in-a-category-as-completed 8277138] Implement bulk completion logic
+ 1 file changed, 1 insertion(+)
+
+avona@avonamolos MINGW64 ~/SI_2025_lab1_236030 (9-mark-all-tasks-in-a-category-as-completed)
+$ git push origin 9-mark-all-tasks-in-a-category-as-completed
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 395 bytes | 197.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/avonamolos/SI_2025_lab1_236030.git
+   2a6046c..8277138  9-mark-all-tasks-in-a-category-as-completed -> 9-mark-all-tasks-in-a-category-as-completed
+
+avona@avonamolos MINGW64 ~/SI_2025_lab1_236030 (9-mark-all-tasks-in-a-category-as-completed)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+avona@avonamolos MINGW64 ~/SI_2025_lab1_236030 (master)
+$ git pull origin master
+remote: Enumerating objects: 10, done.
+remote: Counting objects: 100% (10/10), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 4 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (4/4), 1.97 KiB | 168.00 KiB/s, done.
+From https://github.com/avonamolos/SI_2025_lab1_236030
+ * branch            master     -> FETCH_HEAD
+   2a6046c..5a1b6ad  master     -> origin/master
+Updating 2a6046c..5a1b6ad
+Fast-forward
+ SI2025Lab1Main.java | 2 ++
+ 1 file changed, 2 insertions(+)
+
+avona@avonamolos MINGW64 ~/SI_2025_lab1_236030 (master)
+$ git merge 1-remove-a-task-by-name
+Auto-merging SI2025Lab1Main.java
+Merge made by the 'ort' strategy.
+ SI2025Lab1Main.java | 2 ++
+ 1 file changed, 2 insertions(+)
+
